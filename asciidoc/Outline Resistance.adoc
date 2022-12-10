@@ -1,0 +1,83 @@
+[arabic]
+. Resistance (30)
+[arabic]
+.. Define Resistance
+.. What are the units of resistance
+[arabic]
+... What are big and small resistors. ?
+.. What is an open 1.What is the resistance of an open?
+.. What is a short 1.What is the resistance of a short?
+.. What type of circuit is an open switch
+[arabic]
+... what is the ideal resistance of an open switch?
+.. What type of circuit is a closed switch
+[arabic]
+... What is the ideal resistance of a closed switch?
+.. High and low side switching
+[arabic]
+... which is more common
+.. Schematic symbol for a resistor
+.. Quantities that affect resistance
+[arabic, start=2]
+... relationship of these quantities and units
+... If path length increases does resistance increase or decrease?
+... if path cross sectional area increases does resistance increase or
+decrease?
+.. What is the difference between higher and lower gauge number wires?
+. Series Resistors (12)
+[arabic]
+.. Formula for resistors in series
+[arabic]
+... Does the order of series resistors affect the total resistance in a
+path
+... How does the addition of a resistor in series affect the total
+resistance of a path?
+.. How does a switch in series affect current flow through a circuit?
+. Parallel Resistors (15)
+[arabic]
+.. Formulas for resistors in parallel
+.. Addition of a parallel path always latexmath:[$\rule{1cm}{0.15mm}$]
+total resistance seen by the source
+.. Total resistance of parallel resistors is always
+latexmath:[$\rule{1cm}{0.15mm}$] than the smallest resistor in the
+parallel arrangement
+.. Does the order of resistors in parallel affect the total parallel
+resistance
+.. What happens to the total resistance seen by a source when a low
+resistance path is accidentally placed across the two terminals of the
+source
+.. Difference between series and parallel
+.. Define a series-parallel circuit
+. Variable Resistors (18)
+[arabic]
+.. What are variable resistors called?
+.. How do they work?
+.. Does the total resistance of a potentiometer ever change?
+.. What is the wiper?
+.. If the resistance between the wiper (B) and one terminal (A)
+increases what happens to the resistance between the wiper (B) and the
+other terminal (C)?
+[arabic]
+... You can think of the potentiometer has containing 2 series
+resistors.
+[arabic]
+.... Sometimes I will draw them this way when I’m analyzing them
+... latexmath:[$R_{AC}=R_{AB}+R_{BC}$]
+[arabic]
+.... latexmath:[$R_{AC}$] is the specified resistance of the
+potentiometer
+.. What is the difference between linear and logarithmic tapered
+potentiometers
+. 4 band resistor color code
+[arabic]
+.. You aren’t required to watch this video. It is covered in EET-112.
+But you should be able to answer these questions. If not you might want
+to watch the video.
+.. How does the color scheme help you identify resitor values
+.. List the color code
+.. What is the purpose of the last band (usually 4th)
+.. Define tolerance
+.. How dor 5 and 6 band systems work
+.. How are surface mount resistors identified?
+.. What do the 3 numbers mean
+.. How do the number, letter, number scheme work

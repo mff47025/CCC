@@ -1,0 +1,266 @@
+= Resistors Lab
+// List class and term as authors  
+// Don't have any blank lines before the config file.
+EET-137; Fall 2022
+include::{configdir}/config.adoc[]
+
+// Not using this because I just set a base directory on CLI
+//ifdef::linux[]
+//ifeval::["user-home" == "/home/mff"]
+//include::/home/mff/CCC/Software/asciidoctor/preamble.adoc[]
+//endif::[]
+//ifeval::["user-home" != "/home/mff"]
+//include::G:/My Drive/Software/asciidoctor/preamble.adoc[]
+//endif::[]
+//endif::[]
+//ifdef::win[]
+//endif::[]
+
+These lines are to help me setup scripting.
+
+docdir:{docdir}
+
+docfile:{docfile}
+
+user-home:{user-home}
+
+== Introduction
+
+The Digital Multimeter (DMM) is one of the most common testing tools
+used in electrical circuit analysis. It is a versatile tool that can
+measure AC or DC voltage or current. It also measures resistance, checks
+continuity and can check diode polarity. In order to properly build and
+test electrical circuits one must be comfortable with taking
+measurements using the DMM. One must also be able to understand and
+interpret the DMM readings. A breadboard or ``protoboard'' is one of the
+simplest and most common tools for quickly building circuits. It doesn’t
+require any soldering or special connectors to make the circuit
+connections. We will be using breadboards throughout this year to build
+test circuits. This is our first experiment using the breadboard. If you
+have trouble with your breadboard get help now. Resistors are the most
+basic element we will deal with throughout our electronics career. Even
+when we deal with things that aren’t resistors we pretend they are
+resistors. When we want to analyze a motor, we model it as an inductor
+and resistor. This is done to simplify the analysis since parts of the
+motor behave as a simple resistor. In this lab we will create some
+simple resistors on paper. We will explore how size and shape can affect
+the total resistance of a wire, trace, or connection. We will combine
+resistors in ways to get different net resistor values for our circuits.
+
+<<table1>> contains just an example table.  It has spanned rows, because I do that often.  
+
+.Sample Table for fun
+[#table1]
+[cols="8*^",grid=all,frame=all]
+|===
+
+| Position
+| 
+2+| to feel
+2+| Muscle contract
+2+| Death / Fibrilation
+
+|
+|
+2+| I(mA) = 
+2+| I(mA) = 
+2+| I(mA) =
+
+|
+| R(stem:[$k\W$])
+| V(V)
+| P(W)
+| V(V)
+| P(W)
+| V(V)
+| P(W)
+
+| H2H | | | | | | |
+
+| H2F | | | | | | |
+|===
+
+.2nd table, simpler
+[cols="2*^",grid=all]
+|===
+| one
+| two
+
+| three
+| siz
+|===
+
+== Skills
+
+. Use DMM to measure voltage and resistance
+. Combine resistors in series and parallel to create known resistance
+values
+.. Understand how physical size can affect the resistance of a path
+. Explain how a potentiometer functions.
+
+:sectnums:  //turn section numbers on
+== DMM Checkout
+
+Before using the DMM we should make sure it and the probes are operating
+properly. This is simply done by measure the resistance when the probes
+are shorted together. You should get a resistance of
+stem:[$<100m\W$]. You can also test continuity. This is done by
+setting the DMM to the continuity setting. This is the setting with the
+audio symbol on it. Now when you touch the probes together you should
+get a beep. This is a useful function to look for shorts and opens. Most
+DMMs will beep if the resistance is stem:[$<20\Omega$].
+
+== Creating Resistors
+
+A resistor can be formed by sketching a thick line on a piece of paper,
+using a pencil (not a pen). This is a good way to see how the size and
+shape of material can affect the resistance. In these steps you will
+create 3 different resistors out of pencil lines.
+
+=== Procedure
+
+* Create a thick pencil line that is about 2 inches long. Fully and
+darkly color in this line. Make it darker than you think necessary.
+* Using your DMM measure the resistance of this line from end to end.
+Record the measurement in your notebook.
+* Create a 2nd line that is the same width but twice the length of the
+first line. Measure and record its resistance
+* Create a 3rd line that is same length as the first line but wider.
+Measure and record its resistance.
+
+*Your lines should all be darkly colored with no white space in them.*
+
+*To get good measurements you will have to push your DMM probes into the
+paper. You don’t need to put a hole in the paper, but just touching the
+pencil mark won’t work to well*
+
+=== Analysis
+
+* Include pictures of all three lines in your notebook. Label them A, B,
+C (or 1, 2, 3) for easy identification in your discussion.
+* Which line had the highest resistance? Which had the lowest?
+** Does it work as expected?
+** How does length and width affect the resistance?
+* Why is it important that you make the resistors dark?
+
+== Combining Resistors in Series and Parallel
+
+We will now look at what affect combining resistors in series and
+parallel has on the total resistance. We will take 3 resistors and
+combine them in different ways to see the net result. All three circuits
+that you build will involve the same 3 sized resistors;
+stem:[$2.2k\Omega, 3.3k\Omega, 5.6k\Omega$].
+
+=== Procedure
+
+* Calculate the total resistance if all resistors are combined in
+series.
+** Use Nominal / Ideal resistance values
+** We use Nominal values for calculations because we want to know the
+what the value will likely be no matter who or with what specific
+resistors we build with. We make thousands or parts that use thousands
+of resistors we can’t make a calculation for each
+* Calculate the total resistance if all resistors are combined in
+parallel. (Use Nominal / Ideal resistance values)
+* Measure each individual resistor and record its actual value.
+** This measurement is only needed if we need to justify errors
+** We should get in the habit of finding the actual value of any circuit
+elements we are working with
+*** This helps to make sure we have pulled the correct size device
+*** Verifies that the device is in specification
+* After calculating the values build each configuration, measure, and
+record the actual value. Take pictures of each circuit that you build,
+showing how you measured the resistance. Include these pictures in your
+notebook.
+* Now figure out how to combine all three resistors to create a
+stem:[2.8k \Omega] resistor. Make sure you draw and label your
+final schematic.
+* Build your schematic, measure and record the actual value. Document
+with pictures how you built and measured this circuit.
+
+=== Analysis
+
+* Calculate the %error from your nominal calculation to your measured
+result for all three circuits
+** To calculate error use this equation:
++
+[stem]
+++++
+\%Error = \frac{(Expected\ Value) - (Measured\ Value)}{(Expected\ Value)} \times 100 \W
+++++
+** Do your measurements match what you expected?
+* Do the series and parallel resistor equations work to predict proper
+results?
+
+== Potentiometers
+
+Potentiometers are variable resistors. The usually have a dial, a
+slider, or a screw terminal we can use to adjust the wiper on the
+potentiometer. The resistance between the ends of the resistor
+(terminals 1 and 3) is always fixed. By adjusting the wiper (terminal 2)
+we change the position relative to the ends. This serves to make the
+resistance between 1 and 2 bigger or smaller while at the same time
+making the resistance between 2 and 3 smaller or bigger. To complete
+this section of the lab you will need a stem:[$1.5K\Omega$] and
+stem:[$3.3k\Omega$] fixed resistor, along with a
+stem:[10k\W] pot. You will be building 2 different circuits, so I
+recommend getting two of each resistor.
+
+=== Procedure
+
+* Predict the potentiometer setting needed such that placing all three
+resistors together in series will produce a stem:[$9k\Omega$]
+resistor.
+** Draw your schematic
+* Build your circuit and adjust the pot until the total resistance is
+stem:[$9k\Omega$].
+* Now measure the value of the pot, as you are using it.
+** Record this measurement in a table with your predicted value
+* Now create a configuration such that the total resistance varies from
+stem:[$1.5k\Omega$] to stem:[4k{\W}].
+** Build and test your schematic.
+** Record the maximum and minimum resistance range
+
+=== Analysis
+
+In your analysis discuss how your predictions and calculations matched
+what you measured. Explain what you learned and where you struggled.
+
+* Create column in your data table for %Error
+** Calculate %Error between your predicted pot setting versus the actual
+setting for the series configuration, using the formula from the
+previous section.
+** Use %Error to determine if your predictions match measurements. The
+%Error should be <5% for a good match. 5% is a rule of thumb for us, it
+can go up or down depending on the situation.
+* Compare the actual max and min resistance values for your 2nd circuit
+to the given design specification.
+
+
+// Using Admonitions.  These might still need some formating help
+// These don't reallly process properly.  I don't feel like fixing. 
+// I think it involves the template.
+WARNING: Create tables to organize your data. Below is a table example you
+might use for the 3rd part.
+
+[TIP]
+====
+* Make up your own table for <<_potentiometers>>
+* When connecting potentiometers as variable resistors, you want to
+short the wiper to one end of the potentiometer. This has very little
+baring on the experiments we do. In real life not doing this can
+introduce electrical noise into our circuit. Creating this short also
+protects the circuit if the potentiometer fails. The figure below shows
+an example of how to wire the potentiometer. <<pot>>
+====
+
+I am not sure which method <<pot>> or <<pot2>> I like better for specifying images.  Images must be .svg not .eps.  The 150 below sets the width. (for this line to make sense, read the .adoc code)
+
+// One option for images
+image::variable_res.svg[Potentiometer as a Variable Resistor,150,id=pot,title='Pot as Var Resistor']
+
+
+// or
+.Potentiometer as Variable Resistor
+[#pot2]
+image::variable_res.svg[Potentiometer as a Variable Resistor,150]
